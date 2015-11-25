@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" type="text/css" href="CSS_CS_Dept.css" />
+
+        <title>Indaroma Table Reservation</title>
+
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #layout {
+                float:left;
+                margin:5px,auto,5px,auto
+
+
+            }
+            #namein {
+                display:inline-block;
+                width: 300px;
+                height: 5px;
+                float: left;
+                margin: auto,auto,auto,auto;
+            }
+            #phnin{
+                display:inline-block;
+                width:300px;
+                height:5px;
+                float:left;
+                margin:auto,auto,auto,auto
+            }
+            #tablein {
+                display:inline-block;
+                width:300px;
+                height:5px;
+                float:left;
+                margin:auto,auto,10px,auto
+            }
+
+        </style>
+<script type="text/javascript">
+    function Reserve() {
+                var name = document.getElementById("name").value;
+                var mesg = "**********************************************************\n Thank you for your reservation --- " + name + " .\n You would soon recieve a message stating whether your reservation is confirmed or not\n**********************************************************";
+
+                alert(mesg);
+            }
+            
+        function stringchange(){
+            var x= document.getElementById("phone");
+            
+            var string = x.value.replace(/[^0-9]/g, "");
+    var first3 = string.substring(0,3);
+        var next3 = string.substring(3,6);
+        var next4 = string.substring(6,10);
+        var string1 = ("(" + first3 + ") " + next3 + "-" + next4);
+    x.value = string1;
+    
+            
+            
+        }
+        
+     function settable(x){
+		var t= document.getElementById("table");
+		t.value = x;
+		
+		
+		
+	}
+</script>
+    </head>
+
+    <body>
+        <a href="index.html"><img src="gmu.png" alt="George Mason University" class="gmu"></a>
+    <center>
+        <h1 class="h1">
+            <marquee class="det" behavior ="alternate" direction ="left"  scrollamount="15">Mason Dining Welcomes you !!!
+            </marquee></h1>
+    </center>
+
+    <center>
+
+        <div class="menu-wrap" >
+            <nav class="menu">
+                <ul class="clearfix">
+                    <li class="current-item"><a href="index.html" data-toggle="tooltip" title="This page will give you an overview of our website" >Home</a></li>
+                    <li>
+                        <a href="#" data-toggle="tooltip" title="Welcome to the dining world ">Dining Options <span class="arrow">&#9660;</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="starbucks.html" data-toggle="tooltip" title="Starbucks it is !" >Starbucks</a></li>
+                            <li><a href="Indaroma.html" data-toggle="tooltip" title="The taste of Asia" >IndAroma</a></li>
+                            <li><a href="panera.html" data-toggle="tooltip" title="Subs , Sandwiches and more !!!" >Panera Bread</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="Feedback.html" data-toggle="tooltip" title="Please let us know what you think about us" >Feedback</a></li>
+                    <li><a href="help.html" data-toggle="tooltip" title="Please click this link for any assistance required !" >Help ??</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <form action="panera.html" autocomplete="on" onsubmit="Reserve()">
+            <div class="page-header" style="background-color: darkolivegreen">
+                <br />
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="pan.png">
+                        </a>
+                    </div>
+                    <p class="head">
+                        Live Consciously. Eat Deliciously
+                    </p>
+                    <h2><span style="color:black; font-family: Garamond"><u> Reservation</u> </span></h2>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h3 class="panel-title"><b>Basic Layout of the Restaurant</b></h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <img class="center-block" src="rest_pan.png" width="540" height="385" alt="layout" usemap="#map1" />
+                        
+                        <map name="map1">
+                            <area shape="circle" coords="63,60,40" onclick="settable(1)">
+                            <area shape="circle" coords="159,60,40" onclick="settable(2)">
+                            <area shape="circle" coords="275,60,40" onclick="settable(3)">
+                            <area shape="circle" coords="390,60,40" onclick="settable(4)">
+                            <area shape="circle" coords="485,60,40" onclick="settable(5)">
+                            <area shape="circle" coords="68,195,40" onclick="settable(6)">
+                            <area shape="circle" coords="218,195,40" onclick="settable(7)">
+                            <area shape="circle" coords="344,195,40" onclick="settable(8)">
+                            <area shape="circle" coords="483,195,40" onclick="settable(9)">
+                            <area shape="circle" coords="78,340,40" onclick="settable(10)">
+                            <area shape="circle" coords="219,340,40" onclick="settable(11)">
+                            <area shape="circle" coords="354,340,40" onclick="settable(12)">
+                            <area shape="circle" coords="486,340,40" onclick="settable(13)">
+                        </map>
+                            
+                        <p class="head"> CLICK ON THE TABLE YOU WANT TO RESERVE!!</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h3 class="panel-title"><b>Personal Details</b></h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="col-md-1 col-md-offset-1">
+                        <h3><span class="label label-success">Name</span></h3>
+                    </div>
+                    <div id="namein" class ="col-md-1 col-md-offset-2">
+                        <h3>
+                            <input type="text" id="name"  placeholder="Enter your name" required class="form-control input-sm" aria-describedby="basic-addon1" pattern="[a-zA-Z\s]{1,}" title="Only alphabets and spaces please , minimum 3 letters needed"></h3>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-1 col-md-offset-1">
+                        <h3><span class="label label-success">Phone Number</span></h3>
+                    </div>
+                    <div id="phnin" class="col-md-2 col-md-offset-2">
+                        <h3>
+                            <input type="tel" onblur="stringchange()" required class="form-control input-sm" 
+                                placeholder="###-###-####" aria-describedby="basic-addon1" id="phone" 
+                                 title="Please enter number in the format ###-###-####"></h3>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-1 col-md-offset-1">
+                        <h3><span class="label label-success">Email id</span></h3>
+                    </div>
+                    <div id="emailin" class="col-md-2 col-md-offset-2">
+                        <h3>
+                            <input type="text" required class="form-control input-sm" aria-describedby="basic-addon1" placeholder="name@domain.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Please enter email id in the format name@domain.com" ></h3>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+                </div>
+            </div>
+                </div>
+
+
+            <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h3 class="panel-title"><b>Table reservation details</b></h3>
+                </div>
+                <div class="panel-body">
+                    <div class=" row">
+                        <div class="col-md-1 col-md-offset-1">
+                            <h3><span class="label label-success">Date</span></h3>
+                        </div>
+                        <div class="col-md-2 col-md-offset-2">
+                            <h3>
+                                <input type="date" required class="form-control input-sm"></h3>
+                        </div>
+                        <br>
+                        <br>  <br>
+                        <br>  
+
+                        <div class="col-md-1 col-md-offset-1" >
+                            <h3><span class="label label-success">From Time</span></h3>
+                        </div>
+                        <div class="col-md-2 col-md-offset-2">
+
+                            <h3>
+                                <select class="form-control" required>
+                                    <option>9am </option>
+                                    <option>10am</option>
+                                    <option>11am</option>
+                                    <option>12pm</option>
+                                    <option>1pm</option>
+                                    <option>2pm</option>
+                                    <option>6pm</option>
+                                    <option>7pm</option>
+                                    <option>8pm</option>
+                                    <option>9pm</option>
+
+                                </select>
+
+                                <select class="form-control" required>
+                                    <option>1 hour</option>
+                                    <option>2 hours</option>
+                                    <option>3 hours</option>
+                                    <option>4 hours</option>
+                                    <option>5 hours</option>
+                                    <option>6 hours</option>
+                                    <option>7 hours</option>
+                                    <option>8 hours</option>
+                                </select>
+                            </h3>
+
+
+                        </div>
+                        <br>
+                        <br>
+
+                    </div>
+                    <br>
+                    
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-1">
+
+                        <h3><span class="label label-success">Table Number</span></h3>
+
+                    </div>
+                    <div class="col-md-2 col-md-offset-2" >
+                        <h3>
+                            <select id="table" class="form-control" required>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                            </select></h3>
+                    </div>
+                </div>
+
+            </div>
+                </div>
+
+
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+
+                    <!--<div class="col-md-4 col-md-offset-5">-->
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button></div>
+            </div>
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+            <script src="js/bootstrap.min.js"></script>
+        </form>
+
+    </center>
+    <div id="footer" align="right">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/masondining?fref=ts"><img src='facebook.png' alt="Welcome to Facebook" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Mason_Dining?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='twitter.png' alt="Tweet Something" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/117121921899657520096/posts"><img src='gplus.png' alt="google plus" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=5kN_RCtjfKk"><img src='youtube.png' alt="YouTube" width="40" height="40"> </a>
+            </li>
+            <li>
+                <a href="https://foursquare.com/p/mason-dining-venues/36774632"><img src='foursqaure.png' alt='FourSqaure' width"40" height="40"></a>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

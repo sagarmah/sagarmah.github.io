@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" type="text/css" href="CSS_CS_Dept.css" />
+
+        <title>Feedback</title>
+
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #layout {
+                float:left;
+                margin:5px,auto,5px,auto
+
+
+            }
+            #namein {
+                display:inline-block;
+                width: 300px;
+                height: 5px;
+                float: left;
+                margin: auto,auto,auto,auto;
+            }
+            #phnin{
+                display:inline-block;
+                width:300px;
+                height:5px;
+                float:left;
+                margin:auto,auto,auto,auto
+            }
+            #tablein {
+                display:inline-block;
+                width:300px;
+                height:5px;
+                float:left;
+                margin:auto,auto,10px,auto
+            }
+ 
+
+        </style>
+        <script type="text/javascript" >
+
+            function Submit() {
+                var name = document.getElementById("name").value;
+                var mesg = "**********************************************************\n Thank you for your valuable feedback --- " + name + " .\n Have a lovely day ahead !\n**********************************************************";
+
+                alert(mesg);
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <a href="index.html"><img src="gmu.png" alt="George Mason University" class="gmu"></a>
+    <center>
+        <h1 class="h1">
+            <marquee class="det" behavior ="alternate" direction ="left"  scrollamount="15">Mason Dining Welcomes you !!!
+            </marquee></h1>
+    </center>
+
+    <center>
+
+        <div class="menu-wrap" >
+                <nav class="menu">
+                    <ul class="clearfix">
+                        <li class="current-item"><a href="index.html" data-toggle="tooltip" title="This page will give you an overview of our website" >Home</a></li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" title="Welcome to the dining world ">Dining Options <span class="arrow">&#9660;</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="starbucks.html" data-toggle="tooltip" title="Starbucks it is !" ><b>Starbucks</b></a></li>
+                                <li><a href="Indaroma.html" data-toggle="tooltip" title="The taste of Asia" ><b>IndAroma</b></a></li>
+                                <li><a href="panera.html" data-toggle="tooltip" title="Subs , Sandwiches and more !!!" ><b>Panera Bread</b></a></li>
+                            </ul>
+                        </li>
+                       
+                        <li><a href="Feedback.html" data-toggle="tooltip" title="Please let us know what you think about us" >Feedback</a></li>
+                        <li><a href="help.html" data-toggle="tooltip" title="Please click this link for any assistance required !" >Help ??</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+        <form action="index.html" autocomplete="on" onsubmit="Submit()">
+            <div class="page-header" style="background-color: white">
+                <br />
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="feedback.jpg">
+                        </a>
+                    </div>
+                    <p class="head">
+                        Your Feedback is important to us !!!
+                    </p>
+                  
+                    
+                </div>
+            </div>
+    
+          
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <h3 class="panel-title"><b>Enter your details</b></h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="col-md-1 col-md-offset-4">
+                        <h3><span class="label label-info">Name</span></h3>
+                    </div>
+                    <div id="namein">
+                        <h3>
+                            <input type="text" id="name" placeholder="Enter your name" required class="form-control input-sm" aria-describedby="basic-addon1" pattern="[a-zA-Z\s]{1,}" title="Please enter atleast three letters for name"></h3>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-1 col-md-offset-4">
+                        <h3><span class="label label-info">Email id</span></h3>
+                    </div>
+                    <div id="phnin" class="col-md-2">
+                        <h3>
+                            <input type="text" required class="form-control input-sm" aria-describedby="basic-addon1" placeholder="name@domain.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Please enter email id in the format name@domain.com" ></h3>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+
+                    <div class="col-md-1 col-md-offset-4">
+                        <h3><span class="label label-info">Feedback</span></h3>
+                    </div>
+                    <div id="feed" class="col-md-2">
+                        <h3>
+                            <textarea id="feedback" class="form-control" rows="7" cols="20" required placeholder="Enter your Feedback here"></textarea> </h3>
+                    </div>   
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>   <br>
+                    <br>
+                    <br>   
+                    <br>
+
+                    <br>
+                    
+                    
+
+
+<div id="wrapper2">
+    <div id="row">
+        <div id="wrapper2first">
+            <h1 class="h2">Rate Us...</h1>
+<span class="rating">
+  <input id="rating5" type="radio" name="rating" value="5">
+  <label for="rating5">5</label>
+  <input id="rating4" type="radio" name="rating" value="4">
+  <label for="rating4">4</label>
+  <input id="rating3" type="radio" name="rating" value="3">
+  <label for="rating3">3</label>
+  <input id="rating2" type="radio" name="rating" value="2" checked>
+  <label for="rating2">2</label>
+  <input id="rating1" type="radio" name="rating" value="1">
+  <label for="rating1">1</label>
+</span>
+        </div>
+    </div>
+</div>
+
+
+
+                    <div class="col-md-4 col-md-offset-4">
+
+                        <!--<div class="col-md-4 col-md-offset-5">-->
+                        <button type="submit" class="btn btn-info btn-lg">Submit</button></div>
+                </div>
+
+            </div>
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+            <script src="js/bootstrap.min.js"></script>
+        </form>
+
+    </center>
+
+        <div id="footer" align="right">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/masondining?fref=ts"><img src='facebook.png' alt="Welcome to Facebook" width="40" height="40"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Mason_Dining?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='twitter.png' alt="Tweet Something" width="40" height="40"></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/117121921899657520096/posts"><img src='gplus.png' alt="google plus" width="40" height="40"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=5kN_RCtjfKk"><img src='youtube.png' alt="YouTube" width="40" height="40"> </a>
+                </li>
+                <li>
+                    <a href="https://foursquare.com/p/mason-dining-venues/36774632"><img src='foursqaure.png' alt='FourSqaure' width="40" height="40"></a>
+                </li>
+            </ul>
+
+        </div>
+		</center>
+		</center>
+</body>
+</html>

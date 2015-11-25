@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <title>Book a Table</title>
+    <link rel="shortcut icon" href="">
+    <link rel ="stylesheet" type ="text/css"
+          href="CSS_CS_Dept.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!--  for backgrounnd of carousel-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <body>
+       
+     <a href="https://www2.gmu.edu/"><img src="gmu.png" alt="GMU" align="left" width="70" height="50"></a>
+        <center>
+        <h1 class ="h1">
+            <marquee class="det" behavior ="alternate" direction ="left"  scrollamount="15">Mason Dining Welcomes you !!!
+            </marquee></h1> </center>
+
+        <div class="menu-wrap" >
+                <nav class="menu">
+                    <ul class="clearfix">
+                        <li class="current-item"><a href="#" data-toggle="tooltip" title="This page will give you an overview of our website" >Home</a></li>
+                        <li>
+                            <a href="#" data-toggle="tooltip" title="Welcome to the dining world ">Dining Options <span class="arrow">&#9660;</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="starbucks.html" data-toggle="tooltip" title="Starbucks it is !" ><b>Starbucks</b></a></li>
+                                <li><a href="Indaroma.html" data-toggle="tooltip" title="The taste of Asia" ><b>IndAroma</b></a></li>
+                                <li><a href="panera.html" data-toggle="tooltip" title="Subs , Sandwiches and more !!!" ><b>Panera Bread</b></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="Feedback.html" data-toggle="tooltip" title="Please let us know what you think about us" >Feedback</a></li>
+                        <li><a href="help.html" data-toggle="tooltip" title="Please click this link for any assistance required !" >Help ??</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+
+    <form id="book" class='form1'>
+
+        <input type="button" id="check" value="Check scheduled bookings" onclick="Check();">
+        <br>
+        <div id ="booking"></div>
+        <textarea id = "area1" cols="5" rows="10" hidden></textarea> 
+        <br>
+        <br>
+        <label class='l1' >Name &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    :</label>
+        <input type="text" id="name" placeholder="Name">
+        <br/>
+        <label class="l1" >Telephone Number &nbsp &nbsp :</label>
+        <input type = "tel" id='tel' pattern="^\d{3}-\d{3}-\d{4}$"  placeholder="###-###-####"> 
+        <br/>
+        <label class='l1'>Number of People  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp :</label>
+        <input type = 'number' id='num'>
+
+
+        <br>
+
+        <label class='l1'>Date &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp            :</label>
+        <input type='date' id='date' >
+        <br/>
+
+        <label class='l1'>Time interval &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp  :</label>
+        <input type="time" id='frtime' >
+        -
+        <input type="time" id='totime' >
+        <br>
+        <input type="button" id="Sub" value="Reserve" onclick="onReserve();">
+    </form>
+
+
+
+    <!--Feedback form -->
+
+    <div id="form-main" >
+        <div id="form-div" >
+            <form id="loginForm" class="form1" hidden  >
+                <label>Name &nbsp;&nbsp;&nbsp;&nbsp;: </label>
+                <input type = "text" 
+                       id = "txtName" />
+                <p></p>
+                <label>Email id: </label>
+                <input type = "email" name ="email_id" id="email_id" placeholder="name@domain.com" required > 
+                <p></p>
+                <label>Feedback</label>
+                <textarea name ="feedback" id="feedback" rows ="10" cols ="60" placeholder="Enter your text here">
+                </textarea>
+                <p></p>
+                <label>Rate the website</label>
+                <select name ="rating" id="rating">
+                    <option selected ="selected">Amazing</option>
+                    <option>Average</option>
+                    <option>Bad</Bad>
+                </select>
+                <br/>
+                <label class='l1' id="feed" hidden >Thank you for your feedback</label>
+                <p></p>
+                <input type = "button"
+                       value = "Submit "
+                       onclick="onSubmit()"> 
+                <input type ="button"
+                       value="Cancel"
+                       onclick="window.location.href = 'index.html'">
+                <h1>
+
+            </form>
+        </div>
+    </div>
+    <!-- Feedback form end -->
+
+
+    <div id="footer" align="right">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/masondining?fref=ts"><img src='facebook.png' alt="Welcome to Facebook" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Mason_Dining?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='twitter.png' alt="Tweet Something" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/117121921899657520096/posts"><img src='gplus.png' alt="google plus" width="40" height="40"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=5kN_RCtjfKk"><img src='youtube.png' alt="YouTube" width="40" height="40"> </a>
+            </li>
+            <li>
+                <a href="https://foursquare.com/p/mason-dining-venues/36774632"><img src='foursqaure.png' alt='FourSqaure' width"40" height="40"></a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>

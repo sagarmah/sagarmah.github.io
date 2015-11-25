@@ -1,0 +1,458 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 26, 2015, 12:57:11 AM
+    Author     : Supriya
+*/
+
+
+// for Marquee
+marquee.det {font-family: Lucida Calligraphy ; font-size: 25px ;  font-weight: bold  }
+
+div.div1 {
+         background-image: url('https://gmu.sodexomyway.com/images/southside_tcm1056-24525.jpg');
+         background-repeat: no-repeat ;
+         background-color: #a1a1a1 ;
+              
+}
+p.head {font-family: Garamond ; font-size: 20px ; font-weight: bold ; text-align: center}
+
+table {font-family: Callibri ; color : black ; border-color: black ; border-width : 5px ; margin: auto}
+
+label.l1 {font-weight: bold ; font-family: Garamond ; text-align:center}
+
+input.i1 {width: 150px ; font-family: Garamond ; font-weight: bold ; color: blue}
+
+option.o1 {width: 20px ; font-family: Garamond ; font-weight: bold ; color: blue}
+
+datalist.d1 {width: 20px ; font-family: Garamond ; font-weight: bold ; color: blue}
+
+h1.h1 {color: darkgreen ;font-family: Garamond; text-shadow: 3px 3px gold; text-align: center}
+h1.h2 {color:#0044cc;
+    font-family: Baskerville;
+	font-size: 28px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 33.6px;}
+p.i1 {font-weight: bold ; font-family: Garamond ; color:Green ; font-size: 30px; font-style: italic }
+p.i2 {font-family: Garamond;
+    font-size: 25px;font-style: normal;font-variant: normal;font-weight: 900;line-height: 26px; color: #474747;
+    margin-top: 20px; margin-bottom: 20px; margin-left: 20px; }
+
+p.box{ font-family: Garamond ; font-weight: bold ;bottom: 0px;
+       left: 1875px; position: absolute ;}
+
+img.align { right : 0px ; position: absolute ;border :0 ; bottom: 0px}
+fieldset {width: 550px }
+
+legend {font-size: 20px ; font-weight: bolder}
+
+textarea.a1 {font-family: Garamond ; color: blue ;font-weight: bold}
+
+select.s1 {width: 20px ; font-family: Garamond ; font-weight: bold ; color: blue}
+
+input.inp {color: blue; 
+           font-weight: bold;
+           width: 200px; margin: 5px; 
+           border: 2px solid #a1a1a1;
+           padding: 10px 40px; 
+           background: graytext;
+           border-radius: 25px; }
+
+div.item {height: 400px}
+div.item_active {height: 400px}
+
+#menu {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    font-family: Garamond;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: 3px 2px 3px white;
+    background-color: #c1c1c1;
+    border-color: blue ;
+    border-radius: 10px;
+    float: right;
+}
+
+#menu ul {
+  
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#menu li { 
+
+    display: inline; 
+    padding: 20px; 
+}
+
+#menu a {
+ 
+    text-decoration: none;
+    color: Green;
+    padding: 8px 8px 8px 8px;
+}
+
+#menu a:hover {
+
+    color: red;
+    background-color: #FFF;
+}
+
+<!-- for feedback 
+
+form.form1 {left: 900px ; top: 5 ; position:absolute ; color: red ;font-weight: bold ;border-color: blue}
+
+#form-main{
+	width:15px;
+	float:left;
+	padding-top:0px;
+        left: 1250px ; 
+        top: 99px ; 
+        position:absolute ; 
+        color: blue ;
+        border-color: blue
+}
+
+#form-div {
+	background-color:#3e3436;
+	width: 450px;
+	float: left;
+	left: 50%;
+        margin-top:30px;
+	margin-left: 130px;
+       -moz-border-radius: 7px;
+       -webkit-border-radius: 7px;
+}
+
+
+#footer {
+    width: 100%;
+    height: 55px;
+    top: 1300px;
+    font-size: 20px;
+    font-family: Garamond;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: 3px 2px 3px white;
+    background-color:#C8C8C8;
+    border-color: blue ;
+    border-radius: 10px;
+    float: right;
+}
+
+#footer ul {
+  
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#footer li { 
+
+    display: inline; 
+    padding: -3px; 
+}
+
+#footer a {
+ 
+    text-decoration: none;
+    color: Green;
+    padding: 2px 2px 2px 2px;
+}
+
+#footer a:hover {
+
+    background-color: #FFF;
+}
+
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#bf5c71;
+}
+
+// for the dropdown in NavBar 
+body {
+    background:#C8C8C8 ;
+}
+ 
+.clearfix:after {
+    display:block;
+    clear:both;
+    text-align: right ;
+}
+
+ 
+/*----- Menu Outline -----*/
+.menu-wrap {
+    text-align: right;
+    width:100%;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background: #C8C8C8;
+}
+ 
+.menu {
+    width:1200px;
+    margin:0px auto;
+}
+ 
+.menu li {
+    margin:0px;
+    list-style:none;
+    font-family:'Ek Mukta';
+}
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color: darkgreen;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color: darkgreen;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+.menu > ul > li 
+{
+    
+    display:inline-block;
+    position:relative;
+    font-size:19px;
+}
+ 
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background: white;
+}
+.menu li a:hover, .menu .current-item a {
+    background: white;
+}
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:100%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    right: 0px;
+    text-align: right;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#C8C8C8;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background: white;
+}
+
+p.book
+{
+    position: fixed;
+    left:0px;
+    top:150px;
+    text-align: right;
+    
+}
+#wrapper3 {
+    display: table;
+    width: 800px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    
+    
+}
+#wrapper3first{
+display:table-cell;
+border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  
+  width:360px;
+  height:200px;
+  margin-right: 10px;
+ 
+  margin-top: 20px;
+  }
+  #wrapper3second{
+display:table-cell;
+border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  
+  width:360px;
+  height:200px;
+  
+  margin-left: 10px;
+  margin-top: 20px;
+  }
+
+#wrapper2 {
+    display: table;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+#wrapper2first {
+    display:table-cell;
+  background-color:#E6E6E6;
+  border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  width:360px;
+  height:200px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#wrapper {
+  display:table;
+  width:1240px;
+  margin-bottom: 20px;
+  
+
+}
+#row {
+  display:table-row;
+  
+}
+#first {
+  display:table-cell;
+  background-color:white;
+  width:400px;
+  height:200px;
+  border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+#second {
+  display:table-cell;
+  background-color: white;
+  width:400px;
+  height:200px;
+  margin-right: 20px;
+  margin-top: 10px;
+  border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  
+}
+#third {
+  display:table-cell;
+  background-color:white;
+  width:400px;
+  height:200px;
+  margin-top: 10px;
+  box-shadow: 0px 10px 40px darkolivegreen;
+  border: 2px solid #003300;
+  
+}
+#helpdiv{
+    display: block;
+    background-color:#E6E6E6;
+    width: 1200px;
+    border: 2px solid #003300;
+  box-shadow: 0px 10px 40px darkolivegreen;
+    
+}
+img.gmu {
+    position: absolute;
+    left: 0px;
+    width: 100px;
+    height: 50px;
+}
+
+
+
+
+#hovering{
+   background-image: url('reserve.png');
+   height: 100px;
+   width: 100px;
+}
+#hovering:hover {
+   background-image: url('reserve.png');
+   width: 200px;
+   height: 200px;
+}
+
+
+#maincontainer{
+    background-image: url(texture1.jpg);
+    height: auto;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    
+}
+#myCarousel{
+    
+    box-shadow: 0px 20px 30px #888888;
+    background-color: lightyellow;
+  border: 4px solid #003300;
+    
+}
+#padding1{
+    padding-top: 10px;
+}
