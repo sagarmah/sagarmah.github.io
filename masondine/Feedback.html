@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
         <link rel="stylesheet" type="text/css" href="CSS_CS_Dept.css" />
-
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <title>Feedback</title>
 
 
@@ -19,7 +19,7 @@
         <style>
             #layout {
                 float:left;
-                margin:5px,auto,5px,auto
+                margin:5px,auto,5px,auto;
 
 
             }
@@ -35,31 +35,85 @@
                 width:300px;
                 height:5px;
                 float:left;
-                margin:auto,auto,auto,auto
+                margin:auto,auto,auto,auto;
             }
             #tablein {
                 display:inline-block;
                 width:300px;
                 height:5px;
                 float:left;
-                margin:auto,auto,10px,auto
+                margin:auto,auto,10px,auto;
             }
- 
+
 
         </style>
         <script type="text/javascript" >
 
-            function Submit() {
-                var name = document.getElementById("name").value;
-                var mesg = "**********************************************************\n Thank you for your valuable feedback --- " + name + " .\n Have a lovely day ahead !\n**********************************************************";
+            function checkCookie() {
 
-                alert(mesg);
+                if (document.cookie)
+                {
+                    // convert escape characters in the cookie string to their
+                    // English notation
+                    debugger;
+                    var myCookie = unescape(document.cookie);
+
+                    // split the cookie into tokens using = as delimiter
+                    var cookieTokens = myCookie.split("=");
+
+                    // set name to the part of the cookie that follows the = sign
+                    var name1 = cookieTokens[ 1 ];
+                    var name2 = name1.split(";");
+                    var name = name2[0];
+                    var email = cookieTokens[2];
+                    document.getElementById('name').value = name;
+                    document.getElementById('emailId').value = email;
+
+                }
+                document.forms[0].elements[0].focus();
+            }
+
+            function Submit() {
+
+                var flag = '0';
+                var name = document.getElementById("name").value;
+                if (name === '') {
+                    var mesg = "*********************************************************\n Please enter your name ! \n Enter your name in the name section. ********************************************************* ";
+                    // var mesg = "Name cannot be blank";
+                    flag = '1';
+                }
+
+                var feedback = document.getElementById("feedback").value;
+                if (feedback === '') {
+
+                    if (flag === '1') {
+                        var mesg = "\n" + mesg + " Opps!! No Feedback Found!! \nFeedback cannot be blank!\n Please enter feedback in the feedback section\n*********************************************************";
+                    }
+                    else {
+                        var mesg = "*********************************************************\n Opps!! No Feedback Found!!\n Please enter your feedback !\nPlease enter feedback in the feedback section\n*********************************************************";
+                    }
+                    flag = '1';
+                }
+                //     var mesg = (mesg + "Feedback cannot be blank");
+
+
+                if (flag === '1') {
+                    alert(mesg);
+                }
+                else {
+
+                    debugger;
+                    var name = document.getElementById("name").value;
+                    var mesg = "*********************************************************\n Thank you for your valuable feedback --- " + name + " .\n We appreciate the time you took to provide us feedback. \n Have a lovely day ahead !\n*********************************************************";
+                    alert(mesg);
+                    location.href = "index.html";
+                }
             }
         </script>
 
     </head>
 
-    <body>
+    <body onload="checkCookie()">
         <a href="index.html"><img src="gmu.png" alt="George Mason University" class="gmu"></a>
     <center>
         <h1 class="h1">
@@ -70,155 +124,177 @@
     <center>
 
         <div class="menu-wrap" >
-                <nav class="menu">
-                    <ul class="clearfix">
-                        <li class="current-item"><a href="index.html" data-toggle="tooltip" title="This page will give you an overview of our website" >Home</a></li>
-                        <li>
-                            <a href="#" data-toggle="tooltip" title="Welcome to the dining world ">Dining Options <span class="arrow">&#9660;</span></a>
-                            <ul class="sub-menu">
-                                <li><a href="starbucks.html" data-toggle="tooltip" title="Starbucks it is !" ><b>Starbucks</b></a></li>
-                                <li><a href="Indaroma.html" data-toggle="tooltip" title="The taste of Asia" ><b>IndAroma</b></a></li>
-                                <li><a href="panera.html" data-toggle="tooltip" title="Subs , Sandwiches and more !!!" ><b>Panera Bread</b></a></li>
-                            </ul>
-                        </li>
-                       
-                        <li><a href="Feedback.html" data-toggle="tooltip" title="Please let us know what you think about us" >Feedback</a></li>
-                        <li><a href="help.html" data-toggle="tooltip" title="Please click this link for any assistance required !" >Help ??</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="menu">
+                <ul class="clearfix">
+                    <li ><a href="index.html" data-toggle="tooltip" title="This page will give you an overview of our website" >Home</a></li>
+                    <li>
+                        <a href="#" data-toggle="tooltip" title="Welcome to the dining world ">Dining Options <span class="arrow">&#9660;</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="starbucks.html" data-toggle="tooltip" title="Starbucks it is! Check out our menu. Sorry cannot reserve a table " ><b>Starbucks</b></a></li>
+                            <li><a href="Indaroma.html" data-toggle="tooltip" title="The taste of Asia. You can check our menu and reserve a table. " ><b>IndAroma</b></a></li>
+                            <li><a href="panera.html" data-toggle="tooltip" title="Subs , Sandwiches and more !!!  You can check our menu and reserve a table." ><b>Panera Bread</b></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="current-item"><a href="Feedback.html" data-toggle="tooltip" title="Please let us know what you think about us" >Feedback</a></li>
+                    <li><a href="help.html" data-toggle="tooltip" title="Please click this link for any assistance required !" >Help ??</a></li>
+                </ul>
+            </nav>
+        </div>
 
 
 
         <form action="index.html" autocomplete="on" onsubmit="Submit()">
             <div class="page-header" style="background-color: white">
-                <br />
+
                 <div class="media">
                     <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="feedback.jpg">
+                        <a href="#" >
+                            <img class="media-object" src="feedback.jpg" data-toggle="tooltip" title="Feedback">
                         </a>
                     </div>
-                    <p class="head">
+                    <p class ="i1">
                         Your Feedback is important to us !!!
                     </p>
-                  
-                    
+
+
                 </div>
             </div>
-    
-          
-            <div class="panel panel-default">
-                <div class="panel-heading">
 
-                    <h3 class="panel-title"><b>Enter your details</b></h3>
+
+            <div class ="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+                        <h3 class="panel-title"><b>Enter your details</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <br/><br/><br/>
+                        <div class="col-sm-1">
+                            <h3><span class="label label-info">Name *</span></h3>
+                        </div>
+                        <div id="namein" class="col-sm-offset-2">
+                            <h3>
+                                <input type="text" id="name" placeholder="Enter your name" required class="form-control input-sm" pattern="[a-zA-Z\s]{1,}" title="Please enter atleast three letters for name"></h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-sm-1">
+                            <h3><span class="label label-info">Email id *</span></h3>
+                        </div>
+                        <div id="phnin" class=" col-sm-offset-2">
+                            <h3>
+                                <input type="text" id="emailId" required class="form-control input-sm" aria-describedby="basic-addon1" placeholder="name@domain.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Please enter email id in the format name@domain.com" ></h3>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <br>
+
+                    </div>
                 </div>
-                <div class="panel-body">
-
-                    <div class="col-md-1 col-md-offset-4">
-                        <h3><span class="label label-info">Name</span></h3>
-                    </div>
-                    <div id="namein">
-                        <h3>
-                            <input type="text" id="name" placeholder="Enter your name" required class="form-control input-sm" aria-describedby="basic-addon1" pattern="[a-zA-Z\s]{1,}" title="Please enter atleast three letters for name"></h3>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="col-md-1 col-md-offset-4">
-                        <h3><span class="label label-info">Email id</span></h3>
-                    </div>
-                    <div id="phnin" class="col-md-2">
-                        <h3>
-                            <input type="text" required class="form-control input-sm" aria-describedby="basic-addon1" placeholder="name@domain.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Please enter email id in the format name@domain.com" ></h3>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-
-                    <br>
-
-                    <div class="col-md-1 col-md-offset-4">
-                        <h3><span class="label label-info">Feedback</span></h3>
-                    </div>
-                    <div id="feed" class="col-md-2">
-                        <h3>
-                            <textarea id="feedback" class="form-control" rows="7" cols="20" required placeholder="Enter your Feedback here"></textarea> </h3>
-                    </div>   
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>   <br>
-                    <br>
-                    <br>   
-                    <br>
-
-                    <br>
-                    
-                    
-
-
-<div id="wrapper2">
-    <div id="row">
-        <div id="wrapper2first">
-            <h1 class="h2">Rate Us...</h1>
-<span class="rating">
-  <input id="rating5" type="radio" name="rating" value="5">
-  <label for="rating5">5</label>
-  <input id="rating4" type="radio" name="rating" value="4">
-  <label for="rating4">4</label>
-  <input id="rating3" type="radio" name="rating" value="3">
-  <label for="rating3">3</label>
-  <input id="rating2" type="radio" name="rating" value="2" checked>
-  <label for="rating2">2</label>
-  <input id="rating1" type="radio" name="rating" value="1">
-  <label for="rating1">1</label>
-</span>
-        </div>
-    </div>
-</div>
-
-
-
-                    <div class="col-md-4 col-md-offset-4">
-
-                        <!--<div class="col-md-4 col-md-offset-5">-->
-                        <button type="submit" class="btn btn-info btn-lg">Submit</button></div>
-                </div>
-
             </div>
 
 
+            <div class ="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                        <h3 class="panel-title"><b>Your Feedback</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-1">
+                            <h3><span class="label label-info">Feedback *</span></h3>
+                        </div>
+                        <br>
+                        <div id="feed" class=""col-sm-1">
+                             <h3>
+                                <textarea id="feedback" class="form-control" rows="4" cols="20" required placeholder="Enter your Feedback here"></textarea>
+                            </h3>
+                        </div>   
+                        <br>
 
-            <script src="js/bootstrap.min.js"></script>
+                        <div class="col-sm-1">
+                            <h3><span class="label label-info">Rate Us...</span></h3>
+                        </div>
+
+                        <div id="feed" class="col-sm-7" >
+                            <div class="stars">
+                                <!--<form action="" >-->
+                                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-1"></label>
+                               <!-- </form>-->
+                            </div>
+                        </div> 				
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-info btn-lg" onclick="Submit()">Submit</button>
+                    <button type="reset" class ="btn btn-info btn-lg">Reset</button>
+                </div>
+            </div>
+
         </form>
-
     </center>
 
-        <div id="footer" align="right">
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/masondining?fref=ts"><img src='facebook.png' alt="Welcome to Facebook" width="40" height="40"></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/Mason_Dining?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='twitter.png' alt="Tweet Something" width="40" height="40"></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/117121921899657520096/posts"><img src='gplus.png' alt="google plus" width="40" height="40"></a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=5kN_RCtjfKk"><img src='youtube.png' alt="YouTube" width="40" height="40"> </a>
-                </li>
-                <li>
-                    <a href="https://foursquare.com/p/mason-dining-venues/36774632"><img src='foursqaure.png' alt='FourSqaure' width="40" height="40"></a>
-                </li>
-            </ul>
+    <br>
+    <br>
+    <br>
 
-        </div>
-		</center>
-		</center>
+    <div id="footer">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/masondining?fref=ts"><img src='facebook.png' alt="Welcome to Facebook" width="40" height="40" data-toggle="tooltip" title="Connect with Facebook"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Mason_Dining?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src='twitter.png' alt="Tweet Something" width="40" height="40" data-toggle="tooltip" title="Connect with Twitter"></a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/117121921899657520096/posts"><img src='gplus.png' alt="google plus" width="40" height="40" data-toggle="tooltip" title="Connect with GooglePlus"></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=5kN_RCtjfKk"><img src='youtube.png' alt="YouTube" width="40" height="40" data-toggle="tooltip" title="Connect with YouTube"> </a>
+            </li>
+            <li>
+                <a href="https://foursquare.com/p/mason-dining-venues/36774632"><img src='foursqaure.png' alt='FourSqaure' width="40" height="40" data-toggle="tooltip" title="Connect with Foursquare"></a>
+            </li>
+        </ul>
+    </div>
+
+
 </body>
 </html>

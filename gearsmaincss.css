@@ -7,18 +7,19 @@
     display: block;
 }
 .row-spcl{
-	margin-top: 15px;
-	border-style: ridge;
-	box-shadow: black 3px, 5px ;
-	border-radius: 20px;
-	background-color: lightslategrey;
+	margin-bottom : 20px;
+	margim-top: 10px;
+	
+	border-style: outset;
+	box-shadow: 10px 10px 40px deepskyblue;
+	border-bottom-right-radius: 60px;
+	border-top-left-radius: 60px;
+	background-color: black;
 	
 	font-size: 20px;
 	color: deepskyblue;
 }
-.row-spcl:hover{
-	background-color: black;
-}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -60,45 +61,7 @@ html {
     background-color: #0099cc;
     color: lawngreen;
 }
-.nav1{
-	float: right;
-	padding-top: 50px;
-    
-}
-.nav1 a:hover{
-    color: greenyellow;
-}
 
-a.a1{
-	right: 0%;
-	color: #29293d;
-	margin-left: 0px;
-	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-	font-size: 30px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 40px;
-	text-decoration: none;
-	
-	
-	
-}
-a.default{
-    
-    right: 0%;
-    
-	color: white;
-	margin-left: 0px;
-	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-	font-size: 30px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 40px;
-	text-decoration: none;
-    
-}
 body{
 					background: url("background.jpg");
 					
@@ -192,9 +155,11 @@ body{
 	fill: white;
 }
 .logo{
+	
 	transition: 0.3s ease-in;
 }
 .logo:hover{
+	opacity: 1;
 	fill: whitesmoke;
 }
 .img-holder{
@@ -217,4 +182,116 @@ footer{
 	max-width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+.spcl {
+    display: none;
+	transition: 1s 150s; 
+	
+}
+.spcl-b{
+	margin-right: 0;
+	color: greenyellow;
+}
+    
+.spcl-b:hover + .spcl {
+    display: block;
+}
+
+.nav1{
+	float: right;
+	padding-top: 50px;
+    
+}
+.nav1 a:hover{
+    color: #00cbcc;
+}
+a.a1{
+	right: 0%;
+	color: gray;
+	margin-left: 0px;
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 40px;
+	text-decoration: none;	
+}
+a.default{
+    
+    right: 0%;
+	color: white;
+	margin-left: 0px;
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-size: 27px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 40px;
+	text-decoration: none;
+    
+}
+.row-head{
+	margin-bottom: 20px;
+}
+
+.row-head > .col-4 > h1{
+	text-align: center;
+	color: black;
+	
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 30px;
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: 700;
+	line-height: 27px;
+}
+
+.row-head > .col-head{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-style: inset;
+	box-shadow: white 15px, 15px ;
+	border-radius: 50px; 
+	
+	background-color: lightslategrey;
+}
+h2{
+	height: 25px;
+	border-radius: 30px;
+	background-color: lightslategrey;
+	text-align: center;
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 600;
+	line-height: 20px;
+	color: black
+}
+p2{
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+li{
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 200;
+	line-height: 22px;
+}
+a > img{
+	margin-top: 20px;
+	margin-left: 50px;
+	opacity: 0.5;
+	
+}
+
+a > img:hover{
+	opacity: 1;
 }
