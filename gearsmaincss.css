@@ -257,6 +257,7 @@ a.default{
 	background-color: lightslategrey;
 }
 h2{
+	
 	height: 25px;
 	border-radius: 30px;
 	background-color: lightslategrey;
@@ -294,4 +295,35 @@ a > img{
 
 a > img:hover{
 	opacity: 1;
+}
+
+.col-4 > img{
+	
+	position: center;
+	margin-left: 20%;
+	margin-right: 15%;
+	opacity: 1;
+	
+}
+.col-skill{
+	box-shadow: 10px 10px 40px deepskyblue;
+	border: 1px black;
+	border-style: solid;
+	background-color: darkslategray;
+	border-radius: 30px;
+	border-color: black;
+	min-height: 290px;
+		
+}
+
+.col-skill2{
+	box-shadow: 10px 10px 40px deepskyblue;
+	border: 1px black;
+	border-style: solid;
+	background-color: #800000;
+	border-radius: 30px;
+	border-color: black;
+	min-height: 290px;
+	
+	
 }
