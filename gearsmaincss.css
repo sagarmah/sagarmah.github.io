@@ -8,7 +8,7 @@
 }
 .row-spcl{
 	margin-bottom : 20px;
-	margim-top: 10px;
+	margin-top: 10px;
 	
 	border-style: outset;
 	box-shadow: 10px 10px 40px deepskyblue;
@@ -45,6 +45,25 @@ html {
 	
     
 }
+p3{
+	 font: 400 40px/0.8 'Cookie', Helvetica, sans-serif;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+p4{
+	margin-left: auto;
+	margin-right: auto;
+	font: 300 20px/0.8 'Cookie', Helvetica, sans-serif;
+  color: mediumblue;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+h3{
+	margin-top: 0px;
+	 font: 600 45px/0.8 'Great Vibes', Helvetica, sans-serif;
+	 margin-bottom: 10px;
+  color: blue;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -63,17 +82,19 @@ html {
 }
 
 body{
-					background: url("background.jpg");
+	background: url("background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 					
-					margin-left: auto;
-					margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 				
-				}
-				.div1{
+	}
+	.div1{
 					
-					max-width: 80%;
-					margin: auto;
-				}
+			max-width: 80%;
+			margin: auto;
+			}
 
 				
 	.education{
@@ -155,7 +176,7 @@ body{
 	fill: white;
 }
 .logo{
-	
+	max-width: 80%;
 	transition: 0.3s ease-in;
 }
 .logo:hover{
@@ -179,9 +200,32 @@ footer{
 	font-size: 15px;
 }
 .container{
-	max-width: 80%;
+	max-width: 85%;
 	margin-left: auto;
 	margin-right: auto;
+}
+@media screen and (max-width:959px){
+.container{max-width: 100%;}
+.row{max-width: 90%;
+	margin-left: 10px;}
+.allgears{max-width: 80%;}
+
+#logo{
+	max-width: 200px;
+	float: left;
+	margin-left: 10px;}
+	a > img{
+		max-width: 70%;
+		
+}
+.scribble-ico{max-width: 70%;}
+
+.col-skill > img, .col-skill2 > img {
+	max-width: 70%;
+}
+.col-skill > h2, .col-skill2 > h2 {
+	max-width: 70%;
+}
 }
 .spcl {
     display: none;
@@ -200,10 +244,14 @@ footer{
 .nav1{
 	float: right;
 	padding-top: 50px;
-    
+    margin-right: 0px;
 }
 .nav1 a:hover{
     color: #00cbcc;
+}
+.allgears{
+	
+	min-width: 400px;
 }
 a.a1{
 	right: 0%;
@@ -230,6 +278,21 @@ a.default{
 	line-height: 40px;
 	text-decoration: none;
     
+}
+a.about-default{
+	color: blue;
+	font: 400 23px/1.3 'Lobster Two', Helvetica, sans-serif;
+  
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+a.about-a1{
+	color: black;
+	font: 400 23px/1.3 'Lobster Two', Helvetica, sans-serif;
+ 
+  
+}
+.row{
+	max-width: 90%;
 }
 .row-head{
 	margin-bottom: 20px;
@@ -327,3 +390,37 @@ a > img:hover{
 	
 	
 }
+
+#svg-logo{
+	width: 50%;
+  background: #fff;
+  margin: 0 auto;
+  /* just to get an apsect ratio same as the SVG's: */
+  padding-top: 48%; 
+  height: 0; 
+  background-image: url("logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-body{
+	background: url("paper2.jpg");
+	background-size: cover; 
+	
+}
+
+.about-body2{
+	background: url("paper.png");
+	 
+	
+}
+.scribble-ico{
+	margin: auto;
+}
+
+#grid{
+	
+	max-width: 50%;
+	
+	margin: auto;
+}
+
