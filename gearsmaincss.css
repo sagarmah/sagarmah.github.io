@@ -57,6 +57,13 @@ p4{
   color: mediumblue;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
+h4{
+margin-top: 0px;
+	 font: 400 25px/0.8 'Great Vibes', Helvetica, sans-serif;
+	 margin-bottom: 10px;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
 h3{
 	margin-top: 0px;
 	 font: 600 45px/0.8 'Great Vibes', Helvetica, sans-serif;
@@ -218,6 +225,11 @@ footer{
 		max-width: 70%;
 		
 }
+#grid{max-width: 200%;
+min-width: 75%;
+margin: auto;}
+#grid > p4{margin-left: 15px;}
+#grid > h4{margin-left: 15px;}
 .scribble-ico{max-width: 70%;}
 
 .col-skill > img, .col-skill2 > img {
